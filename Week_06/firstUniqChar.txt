@@ -1,0 +1,12 @@
+  def firstUniqChar(self, s):
+        ht=OrderedDict()
+        for idx,char in enumerate(s):
+            if char in ht:
+                ht[char]=-1
+            else:
+                ht[char]=idx
+
+        for k,v in ht.items():
+            if v>=0:
+                return v
+        return -1
